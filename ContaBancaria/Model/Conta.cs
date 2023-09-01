@@ -11,11 +11,11 @@ namespace ContaBancaria.Model
         private int numero;
         private int agencia;
         private int tipo;
-        private string titular = string.Empty;
+        private string titular;
         private decimal saldo;
 
         //Criando método construtor
-        public Conta(int id, int agencia, int tipo, string titular, decimal saldo)
+        public Conta(int numero, int agencia, int tipo, string titular, decimal saldo)
         {
             this.numero = numero;
             this.agencia = agencia;
@@ -76,7 +76,7 @@ namespace ContaBancaria.Model
         }
 
         //criando método para saque
-        public bool Sacar(decimal valor)
+        public virtual bool Sacar(decimal valor)
         {
             if(this.saldo < valor){
                 Console.WriteLine("Saldo insuficiente");
@@ -93,7 +93,7 @@ namespace ContaBancaria.Model
         }
 
         //criando método para vizualizar os dados da conta
-        public void Visualizar(){
+        public virtual void Visualizar(){
 
             string tipo = "";
 

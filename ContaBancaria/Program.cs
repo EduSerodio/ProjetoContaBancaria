@@ -7,18 +7,23 @@ class Program
     static void Main(string[] args)
     {
         int opcao;
-        Conta c1 = new Conta(1, 12, 1, "Gaspar", 1000000.0M);
+      
+        ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "Samantha", 100000000.0M, 1000M);
+        cc1.Visualizar();
+        Console.WriteLine();
 
-        c1.Visualizar();
-        c1.SetNumero(345);
-        c1.Visualizar();
+        ContaCorrente cc2 = new ContaCorrente(1, 123, 1, "Samantha", 100000000.0M, 1000M);
+        cc2.Visualizar();
+        Console.WriteLine();
 
-        c1.Sacar(1000);
-        c1.Visualizar();
+        ContaPoupanca cp1 = new ContaPoupanca(1, 123, 1, "Samantha", 100000000.0M, 01);
+        cp1.Visualizar();
+        Console.WriteLine();
 
-        c1.Depositar(5000);
-        c1.Visualizar();
-        
+        ContaPoupanca cp2 = new ContaPoupanca(1, 123, 1, "Samantha", 100000000.0M, 01);
+        cp2.Visualizar();
+        Console.WriteLine();
+
         
         while (true)
         {
@@ -108,7 +113,7 @@ class Program
                     case 9:
                         Console.BackgroundColor = ConsoleColor.Black;
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\nBanco do Brazil com Z - O seu Futuro começa aqui!");
+                        Console.WriteLine("\nBank of the future - O seu Futuro começa aqui!");
                         Sobre();
                         Console.ResetColor();
                         System.Environment.Exit(0);
