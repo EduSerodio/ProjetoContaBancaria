@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace ContaBancaria.Model
 {
-    public class Conta
+    public abstract class Conta
     {
         //criando atributos 
         private int numero;
         private int agencia;
         private int tipo;
-        private string titular;
+        private string titular = "";
         private decimal saldo;
 
         //Criando método construtor
